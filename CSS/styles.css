@@ -1,0 +1,97 @@
+/* Cores usadas: tons de azul e branco/cinza para contraste */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.form-section {
+  width: 50%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.list-section {
+  width: 50%;
+  padding: 20px;
+  background-color: #eef2f9;
+  overflow-y: auto;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccd1d9;
+  border-radius: 4px;
+}
+
+.btn-submit {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-submit:hover {
+  background-color: #2980b9;
+}
+
+#busca {
+  width: calc(100% - 80px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccd1d9;
+  border-radius: 4px;
+}
+
+#btn-buscar {
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btn-buscar:hover {
+  background-color: #2980b9;
+}
+
+#lista-contatos {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-contatos li {
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
