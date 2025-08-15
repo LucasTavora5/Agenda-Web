@@ -7,36 +7,58 @@
     <link rel="stylesheet" href="../CSS/styles.css" />
   </head>
   <body>
-     <!-- Lado esquerdo do formulário -->
+    <!-- Lado esquerdo do formulário -->
     <main class="container">
       <section class="form-section">
         <h2>Cadastre seus contatos na agenda</h2>
         <form id="form-contato">
-          <label for="name">Nome</label>
-          <input type="text" id="name" placeholder="Digite o nome" required />
-          <label for="email">E-mail</label>
+          <label for="name">Nome <span class="required-field">*</span></label>
+          <input
+            type="text"
+            id="name"
+            minlength="1"
+            maxlength="70"
+            class="block"
+            placeholder="Digite o nome"
+            required
+          />
+          <label for="email"
+            >E-mail <span class="required-field">*</span></label
+          >
           <input
             type="email"
             id="email"
             placeholder="Digite o e-Mail"
+            class="block"
+            minlength="1"
+            maxlength="70"
             required
           />
-          <label for="phone_number">Telefone</label>
+          <label for="phone_number"
+            >Telefone <span class="required-field">*</span></label
+          >
           <input
             type="number"
             id="phone_number"
             placeholder="Digite o telefone"
+            class="block"
+            minlength="1"
+            maxlength="70"
             required
           />
-          <label for="image">Foto</label>
+          <label for="avatar-url">URL do Avatar:</label>
           <input
-            type="file"
-            id="image"
-            placeholder="Coloque aqui sua foto"
-            required
+            type="url"
+            id="avatar-url"
+            name="avatar-url"
+            placeholder="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/44.png"
           />
+
           <div class="submit">
             <input type="submit" value="Cadastrar" class="btn-submit" />
+          </div>
+          <div class="cancel">
+            <input type="reset" value="Cancelar" class="btn-reset" />
           </div>
         </form>
       </section>
@@ -48,6 +70,9 @@
           id="busca"
           placeholder="Buscar por nome, e-mail ou telefone"
         />
+        <div id="lista-contatos">
+          <!-- Cards dos contatos serão inseridos aqui -->
+        </div>
         <button id="btn-buscar">Buscar</button>
         <ul id="lista-contatos">
           <!-- Aqui os contatos vão aparecer -->
