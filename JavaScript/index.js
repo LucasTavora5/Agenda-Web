@@ -130,3 +130,6 @@ function excluirContato(indice) {
     mostrarContatos(""); // Atualiza lista
   }
 }
+
+
+
