@@ -130,6 +130,6 @@ function excluirContato(indice) {
     mostrarContatos(""); // Atualiza lista
   }
 }
-
+// subindo pro github pages
 
 
