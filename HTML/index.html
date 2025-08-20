@@ -15,9 +15,10 @@
           <label for="name">Nome <span class="required-field">*</span></label>
           <input
             type="text"
+            name="name"
             id="name"
             minlength="1"
-            maxlength="70"
+            maxlength="30"
             class="block"
             placeholder="Digite o nome"
             required
@@ -27,11 +28,12 @@
           >
           <input
             type="email"
+            name="email"
             id="email"
             placeholder="Digite o e-Mail"
             class="block"
             minlength="1"
-            maxlength="70"
+            maxlength="35"
             required
           />
           <label for="phone_number"
@@ -39,11 +41,12 @@
           >
           <input
             type="number"
+            name="phoneNumber"
             id="phone_number"
             placeholder="Digite o telefone"
             class="block"
             minlength="1"
-            maxlength="70"
+            maxlength="13"
             required
           />
           <label for="avatar-url">URL do Avatar:</label>
@@ -51,33 +54,36 @@
             type="url"
             id="avatar-url"
             name="avatar-url"
-            placeholder="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/44.png"
+            placeholder="Copie e cole o enderenço de qualquer imagem"
           />
 
           <div class="submit">
             <input type="submit" value="Cadastrar" class="btn-submit" />
           </div>
           <div class="cancel">
-            <input type="reset" value="Cancelar" class="btn-reset" />
+            <input type="reset" value="Limpar" class="btn-reset" />
           </div>
         </form>
       </section>
       <!-- Lado direito - Lista -->
       <section class="list-section">
         <h2>Contatos</h2>
-        <input
-          type="text"
-          id="busca"
-          placeholder="Buscar por nome, e-mail ou telefone"
-        />
-        <div id="lista-contatos">
-          <!-- Cards dos contatos serão inseridos aqui -->
+
+        <!-- Agrupador da busca -->
+        <div class="busca-container">
+          <input
+            type="text"
+            id="busca"
+            placeholder="Buscar por nome, e-mail ou telefone"
+          />
+          <button id="btn-buscar">Buscar</button>
         </div>
-        <button id="btn-buscar">Buscar</button>
-        <ul id="lista-contatos">
-          <!-- Aqui os contatos vão aparecer -->
-        </ul>
+
+        <div id="lista-contatos">
+          <!-- Cards dos contatos vão aparecer aqui -->
+        </div>
       </section>
     </main>
+    <script src="../JavaScript/index.js"></script>
   </body>
 </html>

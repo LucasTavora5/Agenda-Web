@@ -39,7 +39,6 @@ label {
   background-color: #f9f9f9;
 }
 
-
 .required-field {
   color: red;
   margin-left: 5px;
@@ -56,19 +55,20 @@ input[type="url"] {
   outline: none;
 }
 
-input[type="text"], 
-input[type="email"], 
+input[type="text"],
+input[type="email"],
 input[type="url"] {
   margin-bottom: 15px;
 }
 
-
-.submit, .cancel {
+.submit,
+.cancel {
   display: inline-block;
   margin-right: 10px;
 }
 
-.btn-submit, .btn-reset {
+.btn-submit,
+.btn-reset {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -76,7 +76,6 @@ input[type="url"] {
   background-color: #3498db;
   color: white;
 }
-
 
 #busca {
   width: calc(100% - 80px);
@@ -86,23 +85,54 @@ input[type="url"] {
   border-radius: 4px;
 }
 
+.busca-container {
+  display: flex;
+  gap: 10px; /* espacinho entre input e botão */
+  margin-bottom: 10px;
+}
+
+#busca {
+  flex: 1; /* input cresce ocupando o espaço */
+}
+
+#busca,
 #btn-buscar {
-  padding: 10px;
-  background-color: #3498db;
+  height: 40px; /* mesma altura para os dois */
+  box-sizing: border-box; /* inclui padding e border na altura */
+  font-size: 16px; /* deixa o texto proporcional */
+}
+
+#busca,
+#btn-buscar {
+  height: 40px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#busca {
+  flex: 1;
+  padding: 0 10px;
+  border: 1px solid #ccd1d9;
+  border-radius: 4px 0 0 4px;
+  background-color: #ffffff; /* cor do input */
+}
+
+#btn-buscar {
+  padding: 0 15px;
+  border-radius: 4px;
+  background-color: #3498db; /* cor padrão azul */
   color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
-#btn-buscar:hover {
-  background-color: #2980b9;
+#lista-contatos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
 }
 
-#lista-contatos {
-  list-style: none;
-  padding: 0;
-}
 
 #lista-contatos li {
   background-color: #fff;
@@ -110,4 +140,25 @@ input[type="url"] {
   border-bottom: 1px solid #ddd;
   margin-bottom: 5px;
   border-radius: 4px;
+}
+.contact-card {
+  position:relative; /* referencia pro absolute funcionar */
+  background: #f4f8fc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.contact-actions span {
+  cursor: pointer;
+  margin-left: 10px;
 }
